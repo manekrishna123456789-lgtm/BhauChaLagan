@@ -3,129 +3,169 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Yash ❤️ Neha | Wedding Invitation</title>
+<title>Yash ❤️ Neha | Royal Wedding</title>
 
-<!-- Google Font -->
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Great+Vibes&display=swap" rel="stylesheet">
 
 <style>
-body {
-    margin: 0;
-    font-family: 'Playfair Display', serif;
-    background: linear-gradient(135deg, #5e0b15, #8b0000);
-    color: gold;
-    text-align: center;
-    overflow-x: hidden;
+
+body{
+margin:0;
+padding:0;
+font-family:'Cinzel', serif;
+background: radial-gradient(circle at top, #8b0000, #3b0000);
+color:#FFD700;
+text-align:center;
+overflow-x:hidden;
 }
 
-.hero {
-    padding: 100px 20px;
+/* Floating Golden Particles */
+body::before{
+content:"";
+position:fixed;
+width:100%;
+height:100%;
+background:url('https://i.ibb.co/6WwZ3Xt/gold-dust.png');
+opacity:0.15;
+animation:move 60s linear infinite;
+z-index:-1;
 }
 
-.hero h1 {
-    font-size: 55px;
-    margin: 10px 0;
+@keyframes move{
+from{background-position:0 0;}
+to{background-position:1000px 1000px;}
 }
 
-.hero h2 {
-    font-size: 30px;
-    margin: 5px 0;
+/* Hero Section */
+.hero{
+padding:120px 20px;
 }
 
-.date {
-    font-size: 28px;
-    margin-top: 20px;
+.hero h1{
+font-size:70px;
+font-family:'Great Vibes', cursive;
+margin:10px 0;
+text-shadow:0 0 20px gold;
 }
 
-.section {
-    padding: 60px 20px;
+.hero h2{
+font-size:28px;
+margin-top:10px;
 }
 
-.countdown {
-    font-size: 30px;
-    margin-top: 20px;
+.date{
+font-size:30px;
+margin-top:20px;
+letter-spacing:3px;
 }
 
-.card {
-    background: rgba(255, 215, 0, 0.1);
-    padding: 30px;
-    margin: 20px auto;
-    width: 90%;
-    max-width: 500px;
-    border: 2px solid gold;
-    border-radius: 15px;
+/* Golden Divider */
+.divider{
+width:200px;
+height:3px;
+background:gold;
+margin:30px auto;
+box-shadow:0 0 15px gold;
 }
 
-.footer {
-    padding: 20px;
-    background: #3b0000;
-    font-size: 18px;
+/* Glass Card */
+.card{
+background:rgba(255,215,0,0.08);
+border:1px solid gold;
+border-radius:20px;
+padding:40px;
+margin:30px auto;
+width:90%;
+max-width:600px;
+backdrop-filter:blur(10px);
+box-shadow:0 0 25px rgba(255,215,0,0.4);
+transition:0.4s;
 }
 
-@media(max-width:600px){
-.hero h1 {font-size: 38px;}
-.hero h2 {font-size: 22px;}
+.card:hover{
+transform:scale(1.05);
+box-shadow:0 0 40px gold;
 }
+
+.countdown{
+font-size:28px;
+margin-top:20px;
+}
+
+.footer{
+padding:25px;
+background:#2a0000;
+font-size:18px;
+margin-top:60px;
+}
+
+@media(max-width:768px){
+.hero h1{font-size:45px;}
+.hero h2{font-size:20px;}
+}
+
 </style>
 </head>
 
 <body>
 
 <div class="hero">
-    <h3>|| श्री गणेशाय नमः ||</h3>
-    <h1>Yash ❤️ Neha</h1>
-    <h2>आपल्या उपस्थितीत आमचा लग्नसोहळा</h2>
-    <div class="date">२२ मार्च २०२६</div>
+<h3>|| श्री गणेशाय नमः ||</h3>
+<h1>Yash ❤️ Neha</h1>
+<h2>आपल्या उपस्थितीत आमचा शुभ विवाह सोहळा</h2>
+<div class="divider"></div>
+<div class="date">२२ मार्च २०२६</div>
 </div>
 
-<div class="section">
-    <h2>💍 Wedding Countdown</h2>
-    <div class="countdown" id="countdown"></div>
+<div class="card">
+<h2>💍 Royal Countdown</h2>
+<div class="divider"></div>
+<div class="countdown" id="countdown"></div>
 </div>
 
-<div class="section">
-    <div class="card">
-        <h2>📖 आमची प्रेमकथा</h2>
-        <p>
-        दोन हृदयांची भेट…<br>
-        दोन आत्म्यांचा संगम…<br>
-        आणि आयुष्यभरासाठी एक सुंदर प्रवास… ❤️
-        </p>
-    </div>
+<div class="card">
+<h2>📖 आमची प्रेमकथा</h2>
+<div class="divider"></div>
+<p>
+दोन हृदयांची भेट... <br>
+दोन आत्म्यांचा संगम... <br>
+आणि आयुष्यभरासाठी एक सुंदर प्रवास ❤️
+</p>
+</div>
 
-    <div class="card">
-        <h2>📍 Venue</h2>
-        <p>
-        Royal Banquet Hall<br>
-        Ahmedabad, Gujarat
-        </p>
-    </div>
+<div class="card">
+<h2>📍 Wedding Venue</h2>
+<div class="divider"></div>
+<p>
+Royal Banquet Hall<br>
+Ahmedabad, Gujarat
+</p>
 </div>
 
 <div class="footer">
-    With Love ❤️ Yash & Neha
+Made with ❤️ for Yash & Neha
 </div>
 
 <script>
 var countDownDate = new Date("March 22, 2026 00:00:00").getTime();
 
 var x = setInterval(function() {
-  var now = new Date().getTime();
-  var distance = countDownDate - now;
+var now = new Date().getTime();
+var distance = countDownDate - now;
 
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-  document.getElementById("countdown").innerHTML =
-  days + " Days | " + hours + " Hours | "
-  + minutes + " Minutes | " + seconds + " Seconds ";
+document.getElementById("countdown").innerHTML =
+days + " Days ✨ " + hours + " Hours ✨ "
++ minutes + " Minutes ✨ " + seconds + " Seconds ";
 
-  if (distance < 0) {
-    clearInterval(x);
-    document.getElementById("countdown").innerHTML = "Wedding Started ❤️";
-  }
+if (distance < 0) {
+clearInterval(x);
+document.getElementById("countdown").innerHTML = "💖 The Royal Wedding Has Begun 💖";
+}
 }, 1000);
 </script>
 
