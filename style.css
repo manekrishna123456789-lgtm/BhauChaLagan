@@ -1,0 +1,16 @@
+.hero {
+  height: 100vh;
+  background: url('https://images.unsplash.com/photo-1519741497674-611481863552') no-repeat center center/cover;
+}
+
+.hero h1 {
+  font-weight: bold;
+}
+
+section {
+  padding: 60px 0;
+}
+
+button {
+  width: 100%;
+}
