@@ -1,16 +1,55 @@
+body {
+  font-family: 'Georgia', serif;
+  background-color: #fff8f0;
+}
+
 .hero {
   height: 100vh;
-  background: url('https://images.unsplash.com/photo-1519741497674-611481863552') no-repeat center center/cover;
+  background: linear-gradient(rgba(139,0,0,0.7), rgba(139,0,0,0.7)),
+              url('https://images.unsplash.com/photo-1519741497674-611481863552')
+              no-repeat center center/cover;
 }
 
 .hero h1 {
+  font-size: 60px;
+  color: gold;
+}
+
+.hero p, .hero h3 {
+  color: white;
+}
+
+.countdown-section {
+  background: #8B0000;
+  padding: 60px 0;
+}
+
+.countdown-section h2 {
+  color: gold;
   font-weight: bold;
+}
+
+#countdown h3 {
+  font-size: 40px;
+  color: gold;
 }
 
 section {
   padding: 60px 0;
 }
 
+h2 {
+  color: #8B0000;
+  font-weight: bold;
+}
+
 button {
   width: 100%;
+  background-color: #8B0000;
+  border: none;
+}
+
+button:hover {
+  background-color: gold;
+  color: black;
 }
