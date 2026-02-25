@@ -1,6 +1,10 @@
+function enterSite(){
+document.getElementById("overlay").style.display="none";
+}
+
 var countDownDate = new Date("March 22, 2026 00:00:00").getTime();
 
-var x = setInterval(function() {
+setInterval(function() {
 
 var now = new Date().getTime();
 var distance = countDownDate - now;
@@ -13,10 +17,5 @@ var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 document.getElementById("countdown").innerHTML =
 days + " Days ✨ " + hours + " Hours ✨ "
 + minutes + " Minutes ✨ " + seconds + " Seconds ";
-
-if (distance < 0) {
-clearInterval(x);
-document.getElementById("countdown").innerHTML = "💖 The Royal Wedding Has Begun 💖";
-}
 
 }, 1000);

@@ -2,13 +2,60 @@ body{
 margin:0;
 padding:0;
 font-family:'Cinzel', serif;
-background: radial-gradient(circle at top, #8b0000, #3b0000);
+background: url('https://images.unsplash.com/photo-1542640244-7e672d6cef4e') no-repeat center center/cover;
 color:#FFD700;
 text-align:center;
 overflow-x:hidden;
 }
 
-/* Hero Section */
+/* Dark Overlay */
+body::before{
+content:"";
+position:fixed;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.7);
+z-index:-1;
+}
+
+/* Entry Overlay */
+.overlay{
+position:fixed;
+width:100%;
+height:100%;
+background:linear-gradient(#8b0000,#3b0000);
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+z-index:1000;
+transition:1s;
+}
+
+.overlay-content h1{
+font-family:'Great Vibes', cursive;
+font-size:60px;
+color:gold;
+text-shadow:0 0 25px gold;
+}
+
+.overlay-content button{
+padding:15px 40px;
+border:none;
+background:gold;
+color:#8b0000;
+font-size:18px;
+cursor:pointer;
+border-radius:30px;
+margin-top:20px;
+transition:0.4s;
+}
+
+.overlay-content button:hover{
+background:white;
+}
+
+/* Hero */
 .hero{
 padding:120px 20px;
 }
@@ -16,22 +63,12 @@ padding:120px 20px;
 .hero h1{
 font-size:70px;
 font-family:'Great Vibes', cursive;
-margin:10px 0;
-text-shadow:0 0 20px gold;
 }
 
-.hero h2{
-font-size:28px;
-margin-top:10px;
+.glow{
+text-shadow:0 0 20px gold, 0 0 40px gold;
 }
 
-.date{
-font-size:30px;
-margin-top:20px;
-letter-spacing:3px;
-}
-
-/* Divider */
 .divider{
 width:200px;
 height:3px;
@@ -40,7 +77,6 @@ margin:30px auto;
 box-shadow:0 0 15px gold;
 }
 
-/* Card */
 .card{
 background:rgba(255,215,0,0.08);
 border:1px solid gold;
@@ -61,17 +97,15 @@ box-shadow:0 0 40px gold;
 
 .countdown{
 font-size:28px;
-margin-top:20px;
 }
 
 .footer{
 padding:25px;
 background:#2a0000;
-font-size:18px;
 margin-top:60px;
 }
 
 @media(max-width:768px){
 .hero h1{font-size:45px;}
-.hero h2{font-size:20px;}
+.overlay-content h1{font-size:40px;}
 }
